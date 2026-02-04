@@ -1,0 +1,51 @@
+.history {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.history-header p {
+  color: #93c5fd;
+}
+
+.empty {
+  background: #020617;
+  border: 1px dashed #1e293b;
+  padding: 40px;
+  text-align: center;
+  border-radius: 14px;
+  color: #64748b;
+}
+
+.history-list {
+  display: grid;
+  gap: 16px;
+}
+
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 18px 24px;
+  border-radius: 12px;
+}
+
+.item-name {
+  font-size: 18px;
+}
+
+.item-qty {
+  background: #1e293b;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+}

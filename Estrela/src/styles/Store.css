@@ -1,0 +1,52 @@
+.store {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.store-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.store-header p {
+  font-size: 18px;
+  color: #93c5fd;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+
+.item-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.item-card p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #facc15;
+}
+
+.item-card button {
+  width: 100%;
+}
+
+.item-card button:disabled {
+  background: #1e293b;
+  cursor: not-allowed;
+  color: #64748b;
+}
