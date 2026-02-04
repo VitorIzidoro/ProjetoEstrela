@@ -1,17 +1,7 @@
-import { useContext } from "react";
-import { StarContext } from "../components/Starcontext";
 import "../styles/Home.css";
 
 export default function Home() {
-  const { stars, addStar, actionsToday, DAILY_LIMIT } =
-    useContext(StarContext);
-
-  function handleAction() {
-    const success = addStar();
-    if (!success) {
-      alert("Limite diário de boas ações atingido 😅");
-    }
-  }
+  const FIXED_STARS = 5; // valor fixo
 
   return (
     <div className="home">
@@ -26,22 +16,17 @@ export default function Home() {
       <section className="cards">
         <div className="card">
           <h3>⭐ Suas estrelas</h3>
-          <span className="stars">{stars}</span>
+          <span className="stars">{FIXED_STARS}</span>
         </div>
 
         <div className="card">
           <h3>📅 Hoje</h3>
           <p>
-            {actionsToday} / {DAILY_LIMIT} ações realizadas
+            0 / 5 ações realizadas
           </p>
         </div>
       </section>
 
-      <section className="action">
-        <button onClick={handleAction}>
-          Registrar boa ação
-        </button>
-      </section>
     </div>
   );
 }
