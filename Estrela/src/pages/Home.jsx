@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StarContext } from "../components/StarContext";
+import { StarContext } from "../components/Starcontext";
 import "../styles/Home.css";
 
 export default function Home() {
