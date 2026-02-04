@@ -49,6 +49,12 @@ export function StarProvider({ children }) {
     return true;
   }
 
+  function useItem(index) {
+  setPurchases(prev =>
+    prev.filter((_, i) => i !== index)
+  );
+}
+
   // 📦 Resumo das compras
   function getPurchaseSummary() {
     const summary = {};
@@ -69,6 +75,7 @@ export function StarProvider({ children }) {
         stars,
         addStar,
         buyItem,
+        useItem,
         purchases,
         getPurchaseSummary,
         actionsToday,

@@ -1,29 +1,33 @@
 import { useContext } from "react";
 import { StarContext } from "../components/Starcontext";
-import "../styles/History.css";
+import "../styles/history.css";
 
 export default function History() {
-  const { purchases, getPurchaseSummary } = useContext(StarContext);
-
-  const summary = purchases.length > 0 ? getPurchaseSummary() : [];
+  const { purchases, useItem } = useContext(StarContext);
 
   return (
     <div className="history">
       <header className="history-header">
-        <h2>Histórico de Compras</h2>
-        <p>{purchases.length} item(ns) comprado(s)</p>
+        <h2>🎁 Seus itens</h2>
+        <p>{purchases.length} item(ns)</p>
       </header>
 
-      {summary.length === 0 ? (
+      {purchases.length === 0 ? (
         <div className="empty">
-          <p>🛒 Nenhuma compra realizada ainda</p>
+          <p>Você ainda não tem itens 💔</p>
         </div>
       ) : (
         <section className="history-list">
-          {summary.map((item, index) => (
+          {purchases.map((item, index) => (
             <div key={index} className="history-card">
               <span className="item-name">{item.name}</span>
-              <span className="item-qty">x{item.qty}</span>
+
+              <button
+                className="use-btn"
+                onClick={() => useItem(index)}
+              >
+                Usar 💖
+              </button>
             </div>
           ))}
         </section>
