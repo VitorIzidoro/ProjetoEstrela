@@ -49,3 +49,17 @@
   border-radius: 999px;
   font-size: 14px;
 }
+
+.use-btn {
+  background: #22c55e;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #020617;
+}
+
+.use-btn:hover {
+  opacity: 0.9;
+}
