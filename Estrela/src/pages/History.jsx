@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { StarContext } from "../components/Starcontext";
-import "../styles/history.css";
+import "../styles/History.css";
 
 export default function History() {
   const { purchases, useItem } = useContext(StarContext);
