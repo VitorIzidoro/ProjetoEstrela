@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { StarContext } from "../components/Starcontext";
+import { StarContext } from "../components/StarContext";
 import "../styles/Home.css";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <section className="hero">
         <h2>Bem-vindo 👋</h2>
         <p>
-          Cada boa ação que você faz te rende uma estrela.
+          Cada coisa que você fizer certo te rende uma estrela.
           Junte estrelas e troque por recompensas na loja ⭐
         </p>
       </section>
